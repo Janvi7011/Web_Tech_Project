@@ -1,4 +1,4 @@
-### Furniture E-Commerce Project
+### E-Commerce Project - Furniture Products
 
 **Student Name**: Janvi Desai  
 **Student Number**: 8927011  
@@ -23,7 +23,7 @@
 - `id` : Number
 - `productname`: String
 - `companyname`: String
-- `category`: Number
+- `category`: String
 - `photoPath`: String
 - `price_per_unit`: Number
 - `status`: String
