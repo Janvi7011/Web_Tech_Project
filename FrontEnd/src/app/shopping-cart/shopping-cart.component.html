@@ -1,0 +1,21 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="shopping-cart">
+    <h1 class="cart-title">Shopping Cart</h1>
+    <mat-divider></mat-divider>
+    <div class="cart-items-container">
+        <div class="cart-item" *ngFor="let item of cartItems">
+            <img class="item-image" src="{{item.image}}" alt="Product Image">
+            <div class="item-details">
+                <h4 class="item-name">{{item.productname}}</h4>
+                <p class="item-company">by {{item.companyname}}</p>
+                <p class="item-category">{{item.category}}</p>
+                <p class="item-price">${{item.priceperunit}}</p>
+                <button class="remove-button" (click)="removeFromCart(item)">Remove</button>
+            </div>
+        </div>
+        <div class="total-price">
+            <h3>Total Price: ${{calculateTotalPrice()}}</h3>
+        </div>
+        
+    </div>
+</div>

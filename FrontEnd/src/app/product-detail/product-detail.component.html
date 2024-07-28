@@ -1,0 +1,11 @@
+<app-navigation-bar></app-navigation-bar>
+<h2 style="text-align:center">Product Card</h2>
+
+<div class="card">
+  <img src="{{product[0].image}}" alt="Denim Jeans" style="width:100%">
+  <h1>Product: {{product[0].productname}}</h1>
+  <p class="price">${{product[0].priceperunit}}</p>
+  <p>Company Name : {{product[0].companyname}}</p>
+  <p>Category : {{product[0].category}}</p>
+  <p><button (click)="addToCart();">Add to Cart</button></p>
+</div>
