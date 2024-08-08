@@ -1,1 +1,39 @@
-<p>admin works!</p>
+
+<div class="content">
+    <nav>
+        <ul>
+            <li><a routerLink="/admin">Home</a></li>
+            <li routerLink="/addProduct"><a>Add Product</a></li>
+            <li style="float:right"><a class="active" routerLink="/login">Logout</a></li>
+          </ul>
+          
+    </nav>
+    </div>
+
+
+    <div class="shopping-cart">
+        <h1 class="cart-title">Products</h1>
+        <mat-divider></mat-divider>
+        
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Company</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor="let item of products">
+                <td>{{item.productname}}</td>
+                <td>{{item.companyname}}</td>
+                <td>${{item.priceperunit}}</td>
+                <td><button routerLink="/editProduct/{{item.productid}}">Edit</button></td>
+                <td><button (click)="deleteProduct(item.productid)">Delete</button></td>
+            </tr>
+           
+        </table>
+    
+    
+    
+    </div>
+    

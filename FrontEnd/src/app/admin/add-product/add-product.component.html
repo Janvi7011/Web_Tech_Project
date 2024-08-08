@@ -1,0 +1,46 @@
+
+<div class="content">
+    <nav>
+        <ul>
+            <li><a routerLink="/admin">Home</a></li>
+            <li routerLink="/addProduct"><a>Add Product</a></li>
+            <li style="float:right"><a class="active" routerLink="/login">Logout</a></li>
+          </ul>
+          
+    </nav>
+    </div>
+
+
+    <div class="shopping-cart">
+        <h1 class="cart-title">Product</h1>
+        <mat-divider></mat-divider>
+        
+        <div class="main-block">
+            <form [formGroup]="addProductForm" >
+            <fieldset>
+            <legend>
+            <h3>Product Details</h3>
+            </legend>
+            <div class="account-details">
+            <div><label>Product ID</label><input type="text" id="id" name="id"  formControlName="id"></div>
+            <div><label>Product Name</label><input type="text" id="name" name="name"  formControlName="name"></div>
+            <div><label>Company Name</label><input type="text" id="cname" name="cname"  formControlName="cname"></div>
+            <div><label>Category Name</label><input type="text" id="category" name="category"  formControlName="category"></div>
+            <div><label>Image Name</label><input type="text" id="image" name="image"  formControlName="image"></div>
+            <div><label>Price Per Unit</label><input type="text" id="ppu" name="ppu"  formControlName="ppu"></div>
+            <div>
+                <label>Status</label> 
+                <select  id="status" name="status" formControlName="status">
+                <option value=""></option>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+                </select>
+                </div>
+            </div>
+            </fieldset>
+                        
+            <button type="submit" (click)="addProduct()">Submit</button>
+            </form>
+            </div> 
+    </div>
+    

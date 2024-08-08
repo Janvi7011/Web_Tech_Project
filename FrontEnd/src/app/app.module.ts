@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { EdtProductComponent } from './Admin/edt-product/edt-product.component';
-import { EdtOrderComponent } from './Admin/edt-order/edt-order.component';
+import { EdtProductComponent } from './admin/edt-product/edt-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
@@ -16,6 +15,10 @@ import {MatDividerModule} from '@angular/material/divider';
 import {  HttpClientModule } from '@angular/common/http';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { HomeComponent } from './home/home.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { LoginComponent } from './admin/login/login.component';
+import { OrderComponent } from './order/order.component';
+import { AddProductComponent } from './admin/add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +26,12 @@ import { HomeComponent } from './home/home.component';
     ProductDetailComponent,
     ShoppingCartComponent,
     EdtProductComponent,
-    EdtOrderComponent,
     NavigationBarComponent,
-    HomeComponent
+    HomeComponent,
+    CheckoutComponent,
+    LoginComponent,
+    OrderComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import { HomeComponent } from './home/home.component';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

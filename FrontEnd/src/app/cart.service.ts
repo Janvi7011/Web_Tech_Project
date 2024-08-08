@@ -13,6 +13,7 @@ export class CartService {
   addToCart(product: any) {
     this.items.push(product);
     localStorage.setItem('cart', JSON.stringify(this.items));
+    alert('Product added in cart');
   }
 
   

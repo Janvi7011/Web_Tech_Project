@@ -1,0 +1,19 @@
+<app-navigation-bar></app-navigation-bar>
+
+
+<div class="login">
+<form [formGroup]="loginForm">
+
+        <div class="account-details">
+        <div>
+            <label>User Name: </label>
+            <input type="text" id="uname" name="uname" formControlName="uname">
+        </div>
+        <div>
+            <label>Password: </label>
+            <input type="password" id="password" name="password" formControlName="password">
+        </div>
+        </div>
+    <button type="submit" (click)="login()">Login</button>
+</form>
+</div>

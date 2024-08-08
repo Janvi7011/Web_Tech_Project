@@ -1,0 +1,44 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="shopping-cart">
+    <h1 class="cart-title">Checkout</h1>
+    <mat-divider></mat-divider>
+    
+    <div class="main-block">
+        <form [formGroup]="checkoutForm" >
+        <fieldset>
+        <legend>
+        <h3>Contact Details</h3>
+        </legend>
+        <div class="account-details">
+        <div><label>Email</label><input type="text" id="email" name="email"  formControlName="email"></div>
+        <div><label>Phone</label><input type="text" id="phone" name="phone"  formControlName="phone"></div>
+        </div>
+        </fieldset>
+        <fieldset>
+        <legend>
+        <h3>Personal Details</h3>
+        </legend>
+        <div class="personal-details">
+        <div>
+        <div><label>Name</label><input type="text" id="name" name="name"  formControlName="name"></div>
+        <div><label>Street</label><input type="text" id="street" name="street" formControlName="street"></div>
+        <div><label>City</label><input type="text" id="city" name="city"  formControlName="city"></div>
+        <div>
+        <label>Province</label> 
+        <select  id="province" name="province" formControlName="province">
+        <option value=""></option>
+        <option value="Ontario">Ontario</option>
+        <option value="Alberta">Alberta</option>
+        <option value="Queubec">Queubec</option>
+        <option value="New Foundland">New Foundland</option>
+        </select>
+        </div>
+        </div>
+        
+        </div>
+        </fieldset>
+        
+        <button type="submit" (click)="checkout()">Submit</button>
+        </form>
+        </div> 
+</div>

@@ -1,0 +1,48 @@
+<app-navigation-bar></app-navigation-bar>
+
+<div class="shopping-cart">
+    <h1 class="cart-title">Order Confirmation</h1>
+    <mat-divider></mat-divider>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Company</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let item of products">
+            <td>{{item.productname}}</td>
+            <td>{{item.companyname}}</td>
+            <td>${{item.priceperunit}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Total</td>
+            <td>${{total}}</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <tr>
+            <th>Shipping Address</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{orderDetails.name}}</td>
+        </tr>
+        <tr>
+            <td>Street</td>
+            <td>{{orderDetails.street}}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>{{orderDetails.city}}</td>
+        </tr>
+        <tr>
+            <td>Province</td>
+            <td>{{orderDetails.province}}</td>
+        </tr>
+    </table>
+
+
+</div>

@@ -9,6 +9,7 @@ import { get } from 'http';
 export class ShoppingCartComponent implements OnInit {
 
   cartItems:any;
+  cart = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -17,6 +18,11 @@ export class ShoppingCartComponent implements OnInit {
 
   getAllCartItems() {
     this.cartItems = JSON.parse(localStorage.getItem('cart') as string) ?? [];
+
+    if(this.cartItems.length > 0) {
+      this.cart = false;
+    }
+
   }
   removeFromCart(product: any) {  
     const index = this.cartItems.findIndex((item: any) => item.productid === product.productid);
